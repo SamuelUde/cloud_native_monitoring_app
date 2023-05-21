@@ -70,7 +70,7 @@ FROM python:3.9-slim-buster
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the requirements file to the working directory
+# Copy the requirements file to the working directory and disable cache
 COPY requirements.txt .
 
 RUN pip3 install --no-cache-dir -r requirements.txt
